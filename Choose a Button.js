@@ -27,16 +27,16 @@ function checkButton(clicked_id) {
     }
     mainDiv.appendChild(text);
     text.id = "textDiv";
-    var nodes = document.getElementById("buttonsDiv").getElementsByTagName('*'); // disable buttons after click
-    for(var i = 0; i < nodes.length; i++){
+    let nodes = document.getElementById("buttonsDiv").getElementsByTagName('*'); // disable buttons after click
+    for(let i = 0; i < nodes.length; i++){
         nodes[i].disabled = true;
     }
 }
 
 resetButton.addEventListener('click', deleteDivs => {
     document.getElementById("makeButtons").disabled = false; // enable button to make buttons
-    var containerButtons = document.getElementById("buttonsDiv");
-    var containerText = document.getElementById("textDiv");
+    let containerButtons = document.getElementById("buttonsDiv");
+    let containerText = document.getElementById("textDiv");
     containerButtons.remove(); 
     containerText.remove(); 
    
