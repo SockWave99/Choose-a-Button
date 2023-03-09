@@ -21,9 +21,9 @@ function checkButton(clicked_id) {
     let text = document.createElement("div");
     let mainDiv = document.getElementsByTagName("div")[0];
     if (clicked_id == goodButtonId) {
-        text.innerHTML = "Ai castigat!";
+        text.innerHTML = "You won!";
     } else {
-        text.innerHTML = "Ai pierdut!";
+        text.innerHTML = "You lost...";
     }
     mainDiv.appendChild(text);
     text.id = "textDiv";
