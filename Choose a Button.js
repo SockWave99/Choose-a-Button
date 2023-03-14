@@ -1,6 +1,9 @@
+let goodButtonId
+
 function makeButtons() {
     document.getElementById("makeButtons").disabled = true; // disable button to make the buttons
     let numberOfButtons = document.getElementById("number").value;
+    goodButtonId = Math.floor(Math.random() * numberOfButtons) + 1;
     let mainDiv = document.getElementsByTagName("div")[0];
     let buttonsDiv = document.createElement("div");
     mainDiv.appendChild(buttonsDiv);
@@ -17,7 +20,6 @@ function makeButtons() {
 }
 
 function checkButton(clicked_id) {
-    let goodButtonId = Math.floor(Math.random() * document.getElementById("number").value) + 1;
     let text = document.createElement("div");
     let mainDiv = document.getElementsByTagName("div")[0];
     if (clicked_id == goodButtonId) {
